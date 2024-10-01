@@ -2,9 +2,9 @@ import { PublicClientApplication } from "@azure/msal-browser";
 
 const MSAL_CONFIG = {
   auth: {
-    clientId: "85cc0d87-88a3-4a05-837c-29f2a7fe4829",
+    clientId: "62909560-f1df-4b5f-a0b0-765d23bf8580",
     authority:
-      "https://login.microsoftonline.com/0a1d7995-b734-4d29-8b90-ba9a075bdd6d.onmicrosoft.com",
+      "https://login.microsoftonline.com/jmtorsviksmartocean.onmicrosoft.com",
     redirectUri: "http://localhost:3000",
   },
   cache: {
@@ -18,7 +18,10 @@ const LOGIN_REQUEST = {
 };
 
 const TOKEN_REQUEST = {
-  scopes: ["User.ReadWrite.All"],
+  scopes: [
+    // "User.Read",
+    // "user_impersonation",
+  ],
 };
 
 const GRAPH_CONFIG = {

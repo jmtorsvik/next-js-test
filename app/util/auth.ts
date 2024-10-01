@@ -25,7 +25,14 @@ const handleRefreshToken = async (): Promise<string> => {
   const tokenResponse = await PUBLIC_CLIENT_APPLICATION.acquireTokenSilent(
     TOKEN_REQUEST
   );
+
   return tokenResponse.accessToken;
+};
+
+const getAccountName = (): string | undefined => {
+  const account = PUBLIC_CLIENT_APPLICATION.getActiveAccount();
+
+  return account?.name;
 };
 
 export { handleSignIn, handleSignOut, handleRefreshToken };
